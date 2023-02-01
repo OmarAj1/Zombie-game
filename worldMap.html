@@ -20,7 +20,7 @@
         justify-content: center;
       }
       .main {
-        height: 100vh;
+        /* height: 100vh; */
         width: 80vw;
         background: linear-gradient(165deg, #e4e4e4 30%, darkgray 70%);
 
@@ -29,6 +29,21 @@
     </style>
   </head>
   <body>
-    <div class="main"></div>
+    <div class="main">
+      <div class="nameLocationBtns">
+        <input type="button" class="btnLOcation" value="location1" />
+        <input type="button" class="btnLOcation" value="location2" />
+        <input type="button" class="btnLOcation" value="location3" />
+      </div>
+      <div class="map">
+        <img src="./assets/map.webp" alt="" />
+      </div>
+      <div class="details">
+        <p><span>gold:</span>100</p>
+        <div><input type="button" value="+" /> <img src="" alt="potion" /></div>
+        <p><span>WIN GAME</span>100</p>
+        <p><span>Cost</span>100oG</p>
+      </div>
+    </div>
   </body>
 </html>
