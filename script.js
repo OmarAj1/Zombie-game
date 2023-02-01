@@ -24,7 +24,24 @@ class Monster {
     }
 }
 
+function fight(monster) {
+    while (player.currentHp > 0 && monster.currentHp > 0) {
+        // when the player attacks
+        let damage = player.str - monster.def;
+        monster.currentHp -= damage;
+        // when the monster attacks
+        damage = monster.str - player.def;
+        player.currentHp -= damage;
+    }
 
-function fight() {
-
+    if (player.currentHp <= 0) {
+        console.log("Game Over! you lost the fight.");
+    }
 }
+let locations = [
+    location1 = {
+        name: 'mapName',
+        monsters: [{}, {}]
+    },
+    //for ex
+];
