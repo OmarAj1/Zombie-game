@@ -1,0 +1,7 @@
+function goToLocation() {
+
+}
+
+function playerCreating() {
+
+}

@@ -1,0 +1,7 @@
+function genMonster() {
+
+}
+
+function mapLocationMonsters() {
+
+}

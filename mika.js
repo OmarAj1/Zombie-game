@@ -1,0 +1,7 @@
+function genLocations() {
+
+}
+
+function listLocations() {
+
+}
