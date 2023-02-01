@@ -5,39 +5,60 @@
 }
 
 .myContainer {
+    /* position: relative; */
     width: 80%;
     height: 100vh;
     margin: 0px auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: column;
     background-color: #f00;
-    background-image: url(/assets/image/image_processing20201124-11438-12e4icj.jpg);
+    /* background-image: url(/assets/image/image_processing20201124-11438-12e4icj.jpg); */
+    background-image: linear-gradient(to left top, #ec6a84, #e5596f, #dd4759, #d33542, #c7212b);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     object-fit: cover;
     text-align: center;
     border-radius: 10px;
+    padding-top: 100px;
 }
+
+
 
 .myContainer .btn-Primary {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #0d6efd;
+    background-color: #d82738;
     border: none;
     color: #fff;
     cursor: pointer;
-    width: 100%;
-    font-size: 2vw;
+    width: 300px;
+    /* font-size: 2vw; */
     text-decoration: none;
     text-align: center;
+  box-shadow: -2px 9px 13px -2px rgba(0,0,0,0.86);
 }
 
 .divStartGame {
-    width: 60%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh;
 }
+.divStartGame img{
+    
+    width: 200px;
+}
+
+.divStartGame form{
+    margin: 10px;
+}
+
 
 .myContainer .btn-Primary:hover {
     opacity: 0.8;
@@ -50,40 +71,46 @@
     border-radius: 10px;
 }
 
-.Container form {
-    width: 100%;
+.divStartGame form {
+    width: 300px;
     padding: 10px;
     text-align: center;
 }
 
-.Container form .submitDiv {
+.divStartGame form .submitDiv {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
+.divStartGame form .submitDiv label{
+    font-weight: 900;
+    /* font-size: 1.5rem; */
+    text-align: center;
+    color: #fff;
 
-.Container form #submit {
-    width: 10%;
+}
+/* .divStartGame form #submit {
+    width: auto;
     background-color: #dc3545;
     border: none;
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
     font-size: 1.5vw;
-}
+} */
 
-.Container form #submit:hover {
+/* .divStartGame form #submit:hover {
     background-color: #ff4053;
-}
+} */
 
-.Container form input {
+.divStartGame form input {
     display: block;
     width: 100%;
     padding: 7px;
     margin: 5px 0px;
 }
 
-.Container form input:focus-visible {
+.divStartGame form input:focus-visible {
     border: #ff4053 solid 2px;
     border-radius: 5px;
     outline: none;
@@ -105,6 +132,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .Container .gamerScren .playerData ul {
@@ -129,17 +157,91 @@
 }
 
 .Container .gamerScren .playerData ul li .informatinPlayers button {
-    padding: 10px;
+    padding: 10px 13px;
     border-radius: 100%;
     border: none;
     background-color: #dc3545;
     color: #fff;
     cursor: pointer;
+    width: auto;
+}
+
+
+.gameOver{
+    width: 80%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+.gameOver img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill cover;
+}
+
+.gameOver::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
 }
 
 @media (min-width:500px) and (max-width:768px) {
+    .myContainer .container img{
+        width: 290px;
+    }
     .gamerScren {
         display: block;
         height: fit-content;
+        margin: 0%;
+        width: auto;
+    }
+    .myContainer{
+        margin: 0%;
+        width: auto;
+    }
+    .Container{
+        margin: 0%;
+        width: auto;
+    }
+    .gameOver{
+        margin: 0% ;
+        width: auto ;
+        height: 100vh ;
+    }
+}
+
+@media (max-width:500px)  {
+    .myContainer .container img{
+        width: 290px;
+    }
+    .gamerScren {
+        display: block;
+        height: fit-content;
+        margin: 0%;
+        width: auto;
+    }
+    .myContainer{
+        margin: 0%;
+        width: auto;
+    }
+    .Container{
+        margin: 0%;
+        width: auto;
+    }
+    .gameOver{
+        margin: 0% ;
+        width: auto ;
+        height: 100vh ;
     }
 }
