@@ -63,7 +63,7 @@
 }
 
 .Container form #submit {
-    width: 10%;
+    width: auto;
     background-color: #dc3545;
     border: none;
     border-radius: 15px;
@@ -105,6 +105,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .Container .gamerScren .playerData ul {
@@ -135,11 +136,39 @@
     background-color: #dc3545;
     color: #fff;
     cursor: pointer;
+    width: auto;
 }
 
 @media (min-width:500px) and (max-width:768px) {
     .gamerScren {
         display: block;
         height: fit-content;
+        margin: 0%;
+        width: auto;
+    }
+    .myContainer{
+        margin: 0%;
+        width: auto;
+    }
+    .Container{
+        margin: 0%;
+        width: auto;
+    }
+}
+
+@media (max-width:500px)  {
+    .gamerScren {
+        display: block;
+        height: fit-content;
+        margin: 0%;
+        width: auto;
+    }
+    .myContainer{
+        margin: 0%;
+        width: auto;
+    }
+    .Container{
+        margin: 0%;
+        width: auto;
     }
 }
