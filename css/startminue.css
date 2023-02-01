@@ -13,7 +13,7 @@
     justify-content: center;
     flex-direction: row;
     background-color: #f00;
-    background-image: url(/asset/images/image_processing20201124-11438-12e4icj.jpg);
+    background-image: url(/assets/image/image_processing20201124-11438-12e4icj.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -111,10 +111,12 @@
     list-style: none;
     width: 100%;
 }
-.Container .gamerScren .playerData ul li{
+
+.Container .gamerScren .playerData ul li {
     /* background-color: #198754; */
     padding: 10px;
 }
+
 .Container .gamerScren .playerData ul li .informatinPlayers {
     display: flex;
     align-items: center;
@@ -122,11 +124,11 @@
     justify-content: space-between;
 }
 
-.Container .gamerScren .playerData ul li .informatinPlayers h4{
+.Container .gamerScren .playerData ul li .informatinPlayers h4 {
     margin: 0px 20px;
 }
 
-.Container .gamerScren .playerData ul li .informatinPlayers button{
+.Container .gamerScren .playerData ul li .informatinPlayers button {
     padding: 10px;
     border-radius: 100%;
     border: none;
