@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.containerWorld {
   width: 100vw;
+  height: 100%;
   /* height: 100vh; */
   background: url("../assets/image/waP2.jpeg") no-repeat center center/cover;
   display: flex;
@@ -21,9 +22,13 @@ body {
 .photoMain {
   display: flex;
 }
+i {
+  font-size: 3rem;
+}
 #mapPic {
   width: 30rem;
   height: 25rem;
+  margin: 2rem 0;
 }
 .nameLocationBtns,
 .map,
@@ -31,6 +36,10 @@ body {
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.map {
+  flex-direction: column;
 }
 
 .nameLocationBtns,
@@ -38,9 +47,14 @@ body {
   flex-direction: column;
 }
 p {
-  margin: 1rem;
-  font-size: 1.5rem;
-  color: darkblue;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #000;
+}
+span {
+  /* margin: 1rem !important; */
+  font-size: 1.5rem !important;
+  color: darkblue !important;
 }
 .btnLOcation {
   min-width: 13rem;
@@ -55,11 +69,6 @@ p {
   color: #000;
 }
 
-span {
-  font-weight: 500 !important;
-  font-size: 2rem !important;
-  color: #000 !important;
-}
 .photoMain {
   display: flex;
   flex-direction: column;
@@ -67,6 +76,7 @@ span {
 }
 .pluss {
   width: 1rem;
+  cursor: pointer;
 }
 .winGameTitle {
   margin-bottom: 0;
@@ -78,6 +88,7 @@ span {
 @media (max-width: 1100px) {
   .main {
     flex-direction: column;
+    height: 100%;
   }
   #mapPic {
     width: 100%;
@@ -87,4 +98,32 @@ span {
     align-items: center;
     justify-content: center;
   }
+  .nameLocationBtns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 0;
+  }
+  .map {
+    padding: 3rem;
+  }
+}
+.containPotion {
+  position: relative;
+}
+.countPotion {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #fff;
+}
+.goldAmount {
+  display: inline-block;
+}
+#backTostats {
+  width: 5rem;
+}
+#backTostats:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
