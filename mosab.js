@@ -25,7 +25,8 @@ function listMonsters(arr) {
         debugger
         const obj = {
             name: acurrVal.name,
-            gold: acurrVal.gold
+            gold: acurrVal.gold,
+            lvl:acurrVal.lvl
         }
         curr.push(obj);
         return curr;
