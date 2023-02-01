@@ -13,21 +13,15 @@
     <main>
         <div class="myContainer">
             <div class="divStartGame">
-                <a href="#nameGamer" class="btn-Primary">Start Game</a>
-            </div>
-        </div>
-        <br>
-        <section id="nameGamer">
-            <div class="Container">
                 <form action="">
                     <div class="submitDiv">
                         <label for="namePlayer">Name Player</label>
-                        <input id="submit" type="submit">
                     </div>
                     <input id="namePlayer" type="text">
                 </form>
+                <a href="#nameGamer" class="btn-Primary">Start Game</a>
             </div>
-        </section>
+        </div>
         <br>
         <section>
             <div class="Container">
@@ -39,12 +33,14 @@
                             </li>
                             <li style="text-align: center;">
                                 <div style="display: block;" class="informatinPlayers">
-                                    <h3>maxHp/100</h3>
+                                    <h3 style="display: inline-block;" id="maxXp">maxXp</h3>
+                                    <h3 style="display: inline-block;">/100</h3>
                                 </div>
                             </li>
-                            <li style="text-align: center;">
-                                <div style="display: block;" class="informatinPlayers">
-                                    <h3>name</h3>
+                            <li>
+                                <div class="informatinPlayers">
+                                    <h4>name</h4>
+                                    <h3 id="name">name</h3>
                                 </div>
                             </li>
                             <li>

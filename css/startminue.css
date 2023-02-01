@@ -25,19 +25,27 @@
 .myContainer .btn-Primary {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #0d6efd;
+    background-color: #dc3545;
     border: none;
     color: #fff;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
     font-size: 2vw;
     text-decoration: none;
     text-align: center;
 }
 
 .divStartGame {
-    width: 60%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+.divStartGame form{
+    margin: 10px;
+}
+
 
 .myContainer .btn-Primary:hover {
     opacity: 0.8;
@@ -50,19 +58,22 @@
     border-radius: 10px;
 }
 
-.Container form {
+.divStartGame form {
     width: 100%;
     padding: 10px;
     text-align: center;
 }
 
-.Container form .submitDiv {
+.divStartGame form .submitDiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-.Container form #submit {
+.divStartGame form .submitDiv label{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+/* .divStartGame form #submit {
     width: auto;
     background-color: #dc3545;
     border: none;
@@ -70,20 +81,20 @@
     color: #fff;
     cursor: pointer;
     font-size: 1.5vw;
-}
+} */
 
-.Container form #submit:hover {
+/* .divStartGame form #submit:hover {
     background-color: #ff4053;
-}
+} */
 
-.Container form input {
+.divStartGame form input {
     display: block;
     width: 100%;
     padding: 7px;
     margin: 5px 0px;
 }
 
-.Container form input:focus-visible {
+.divStartGame form input:focus-visible {
     border: #ff4053 solid 2px;
     border-radius: 5px;
     outline: none;
