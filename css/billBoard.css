@@ -21,6 +21,7 @@
     
 }
 .billboard-container .card{
+    cursor: pointer;
     padding-top: 7px;
     height: 300px;
     width: 200px;
@@ -34,6 +35,9 @@
     color: rgb(82, 42, 10);
     gap: 5px;
     background: url('/assets/image/card-background.png') no-repeat center center/cover;
+}
+.billboard-container .card:hover {
+    opacity: .8;
 }
 
 .billboard-container .monster-image {

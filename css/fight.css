@@ -7,9 +7,11 @@
 .Container {
     margin: 0px auto;
     background-color: #cdcdcd;
-    width: 80%;
+    width: 100%;
     border-radius: 10px;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .fightScreen {

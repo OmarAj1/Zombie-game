@@ -1,5 +1,5 @@
-const location1 = ["blabla", "dladla"];
-const location2 = ["zz", "yy"];
+const location1 = ["Dark", "Light", "Hot", "Cold", "Angry"];
+const location2 = ["Forest", "Village", "Mountain", "Mall", "School"];
 let locationNames = listLocations(4, location1, location2); //שמות המקומות
 let mapLocations = [];
 let currentLocation = null;
@@ -13,9 +13,9 @@ const Player = {
   dex: 10,
   def: 2,
   xp: 0,
-  lvl: 12,
+  lvl: 1,
   potions: 0,
-  freePoints: 5,
+  freePoints: 4,
   gold: 0,
   getRewards(monster) {
     this.gold += monster.gold;
@@ -67,7 +67,13 @@ function listLocations(num, arr1, arr2) {
   //num is amount of location that we want
   let listLocation = [];
   for (let i = 0; i < num; i++) {
-    listLocation.push(genLocations(arr1, arr2));
+    let location= genLocations(arr1, arr2)
+    if(!listLocation.includes(location)){
+        listLocation.push(location);
+    }
+    else{
+        i--;
+    }
   }
   return listLocation;
 }
@@ -156,6 +162,7 @@ function fight(warrior1, warrior2) {
     console.log("Game Over! you lost the fight.");
     return;
   }
+  
   if (warrior1 instanceof Monster) {
     Player.getRewards(warrior1);
   } else {
@@ -185,9 +192,11 @@ const MapSelectors = {
   toLocation2: document.querySelector(".btnLOcation.toLocation2"),
   toLocation3: document.querySelector(".btnLOcation.toLocation3"),
   toLocation4: document.querySelector(".btnLOcation.toLocation4"),
+  locationsButtons: document.querySelectorAll('.btnLOcation'),
   backTostats: document.querySelector("#backTostats"),
   pluss: document.querySelector(".pluss"),
 };
+const billBoardPage = document.querySelector(".Bill-board");
 
 MapSelectors.toLocation1.value = locationNames[0];
 MapSelectors.toLocation2.value = locationNames[1];
@@ -199,13 +208,29 @@ MapSelectors.pluss.addEventListener("click", function () {
   // MapSelectors.thePotionAmount++;
   // MapSelectors.potionAmount.innerText(`${MapSelectors.thePotionAmount}`);
 
-  if (Player.gold >= 0) {
+  if (Player.gold >= 10) {
     Player.gold -= 10;
     Player.potions++;
     MapSelectors.potionAmount.textContent = Player.potions;
     MapSelectors.goldAmount.textContent = Player.gold;
   }
 });
+
+for (let index = 0; index < MapSelectors.locationsButtons.length; index++) {
+    MapSelectors.locationsButtons[index].addEventListener('click',()=>{
+        //TODO: add the monsters to the map
+        billBoardPage.classList.remove('display-none');
+        mapContainer.classList.add('display-none');
+    });
+}
+
+
+MapSelectors.backTostats.addEventListener('click',()=>{
+    mapContainer.classList.add('display-none');
+    playerStatsContainer.classList.remove('display-none');
+
+});
+
 
 // trying to approach DOM
 // hide all sections except the name page
@@ -214,6 +239,7 @@ const startBtn = document.querySelector(".start-game-btn");
 const gameStartContainer = document.querySelector(".myContainer");
 const endStatsBtn = document.querySelector(".go-to-map");
 const playerStatsContainer = document.querySelector(".stats-container");
+const mapContainer = document.querySelector(".containerWorld");
 
 // document.querySelector(".container").style.display = "none";
 // document.querySelector(".Container").style.display = "none";
@@ -235,14 +261,19 @@ document.querySelector("#xpVal").innerHTML = Player.currentHp;
 document.querySelector("#freePoints").innerHTML = Player.freePoints;
 
 startBtn.addEventListener("click", () => {
-    console.log(Player.name);
-  if (nameInput.value === '') {
-    return;
-  }
-  Player.name = nameInput.value;
-  gameStartContainer.classList.add('display-none');
+    if (nameInput.value === '') {
+        return;
+    }
+    Player.name = nameInput.value;
+    gameStartContainer.classList.add('display-none');
+    playerStatsContainer.classList.remove('display-none');
+    document.querySelector("#name").innerHTML = Player.name;
 });
 
+endStatsBtn.addEventListener('click',()=>{
+    playerStatsContainer.classList.add('display-none');
+    mapContainer.classList.remove('display-none');
+});
 
 btnStr.addEventListener("click", function() {
     if (Player.freePoints > 0) {
@@ -280,6 +311,24 @@ btnHp.addEventListener("click", function () {
 });
 
 
-endStatsBtn.addEventListener('click',()=>{
-    playerStatsContainer.classList.add('display-none');
+const backToMapBtn = document.querySelector('.container-arrow');
+const runBtn = document.querySelector('#btnRun');
+
+backToMapBtn.addEventListener('click',()=>{
+    mapContainer.classList.remove('display-none');
+    billBoardPage.classList.add('display-none');
+});
+
+const fightScreen = document.querySelector('.fight-container');
+const monsterCard = document.querySelectorAll('.card');
+
+for (let j = 0; j<4 ; j++){
+    monsterCard[j].addEventListener('click',()=>{
+        fightScreen.classList.remove('display-none');
+        billBoardPage.classList.add('display-none');
+    });
+}
+
+runBtn.addEventListener('click',()=>{
+
 });
