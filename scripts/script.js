@@ -1,4 +1,3 @@
-// connect these together and if it has any problems fix it
 const location1 = ["blabla", "dladla"];
 const location2 = ["zz", "yy"];
 let locationNames = listLocations(4, location1, location2); //שמות המקומות
@@ -9,15 +8,15 @@ const EXP_PER_KILL = 50;
 const Player = {
   maxHp: 100,
   currentHp: 100,
-  name: "player",
+  name: "omar",
   str: 10,
   dex: 10,
   def: 2,
   xp: 0,
-  lvl: 1,
-  potions: 0, //כמות השיקויים
-  freePoints: 3,
-  gold: 0, //ברגע לוחצים על פלוס לבדוק אם יש מספיק כסףץ אם יש מורידים 10 מהגולד ומוסיפים כמות שיקויים
+  lvl: 12,
+  potions: 0,
+  freePoints: 5,
+  gold: 0,
   getRewards(monster) {
     this.gold += monster.gold;
     this.xp += EXP_PER_KILL;
@@ -205,5 +204,63 @@ MapSelectors.pluss.addEventListener("click", function () {
     Player.potions++;
     MapSelectors.potionAmount.textContent = Player.potions;
     MapSelectors.goldAmount.textContent = Player.gold;
+  }
+});
+
+// trying to approach DOM
+// hide all sections except the name page
+// const nameInput = document.querySelector("#namePlayer");
+
+// document.querySelector(".container").style.display = "none";
+// document.querySelector(".Container").style.display = "none";
+// document.querySelector(".containerWorld").style.display = "none";
+// document.querySelector(".gameOver").style.display = "none";
+
+//Character Page
+const btnStr = document.querySelector(".btnStr");
+const btnDex = document.querySelector(".btnDex");
+const btnDef = document.querySelector(".btnDef");
+const btnXp = document.querySelector(".btnXp");
+
+document.querySelector("#btnLvl").innerHTML = Player.lvl;
+document.querySelector("#name").innerHTML = Player.name;
+document.querySelector("#strVal").innerHTML = Player.str;
+document.querySelector("#dexVal").innerHTML = Player.dex;
+document.querySelector("#defVal").innerHTML = Player.def;
+document.querySelector("#xpVal").innerHTML = Player.currentHp;
+
+document.querySelector("#freePoints").innerHTML = Player.freePoints;
+
+btnStr.addEventListener("click", function () {
+  if (Player.freePoints > 0) {
+    Player.str++;
+    document.querySelector("#strVal").innerHTML = Player.str;
+    Player.freePoints--;
+    document.querySelector("#freePoints").innerHTML = Player.freePoints;
+  }
+});
+btnDex.addEventListener("click", function () {
+  if (Player.freePoints > 0) {
+    Player.dex++;
+    document.querySelector("#dexVal").innerHTML = Player.dex;
+    Player.freePoints--;
+    document.querySelector("#freePoints").innerHTML = Player.freePoints;
+  }
+});
+btnDef.addEventListener("click", function () {
+  if (Player.freePoints > 0) {
+    Player.def++;
+    document.querySelector("#defVal").innerHTML = Player.def;
+
+    Player.freePoints--;
+    document.querySelector("#freePoints").innerHTML = Player.freePoints;
+  }
+});
+btnXp.addEventListener("click", function () {
+  if (Player.freePoints > 0) {
+    Player.currentHp++;
+    document.querySelector("#xpVal").innerHTML = Player.currentHp;
+    Player.freePoints--;
+    document.querySelector("#freePoints").innerHTML = Player.freePoints;
   }
 });

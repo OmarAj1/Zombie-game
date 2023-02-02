@@ -25,8 +25,6 @@
     padding-top: 100px;
 }
 
-
-
 .myContainer .btn-Primary {
     padding: 10px 20px;
     border-radius: 5px;
@@ -38,7 +36,7 @@
     /* font-size: 2vw; */
     text-decoration: none;
     text-align: center;
-  box-shadow: -2px 9px 13px -2px rgba(0,0,0,0.86);
+    box-shadow: -2px 9px 13px -2px rgba(0, 0, 0, 0.86);
 }
 
 .divStartGame {
@@ -50,15 +48,14 @@
     padding: 20px;
     height: 100vh;
 }
-.divStartGame img{
-    
+
+.divStartGame img {
     width: 200px;
 }
 
-.divStartGame form{
+.divStartGame form {
     margin: 10px;
 }
-
 
 .myContainer .btn-Primary:hover {
     opacity: 0.8;
@@ -82,13 +79,15 @@
     align-items: center;
     justify-content: center;
 }
-.divStartGame form .submitDiv label{
+
+.divStartGame form .submitDiv label {
     font-weight: 900;
     /* font-size: 1.5rem; */
     text-align: center;
     color: #fff;
-
 }
+
+
 /* .divStartGame form #submit {
     width: auto;
     background-color: #dc3545;
@@ -98,6 +97,7 @@
     cursor: pointer;
     font-size: 1.5vw;
 } */
+
 
 /* .divStartGame form #submit:hover {
     background-color: #ff4053;
@@ -132,11 +132,10 @@
 .Container .gamerScren .playerImg {
     display: flex;
     align-items: end;
-
 }
+
 .Container .gamerScren .playerImg img {
     width: 100%;
-
 }
 
 .Container .gamerScren .playerData {
@@ -178,8 +177,7 @@
     width: auto;
 }
 
-
-.gameOver{
+.gameOver {
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -190,13 +188,14 @@
     margin: 0px auto;
     border-radius: 10px;
 }
-.gameOver img{
+
+.gameOver img {
     width: 100%;
     height: 100%;
     object-fit: fill cover;
 }
 
-.gameOver::after{
+.gameOver::after {
     position: absolute;
     content: '';
     top: 0;
@@ -205,11 +204,10 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
-
 }
 
 @media (min-width:500px) and (max-width:768px) {
-    .myContainer .container img{
+    .myContainer .container img {
         width: 290px;
     }
     .gamerScren {
@@ -218,23 +216,23 @@
         margin: 0%;
         width: auto;
     }
-    .myContainer{
+    .myContainer {
         margin: 0%;
         width: auto;
     }
-    .Container{
+    .Container {
         margin: 0%;
         width: auto;
     }
-    .gameOver{
-        margin: 0% ;
-        width: auto ;
-        height: 100vh ;
+    .gameOver {
+        margin: 0%;
+        width: auto;
+        height: 100vh;
     }
 }
 
-@media (max-width:500px)  {
-    .myContainer .container img{
+@media (max-width:500px) {
+    .myContainer .container img {
         width: 290px;
     }
     .gamerScren {
@@ -243,17 +241,17 @@
         margin: 0%;
         width: auto;
     }
-    .myContainer{
+    .myContainer {
         margin: 0%;
         width: auto;
     }
-    .Container{
+    .Container {
         margin: 0%;
         width: auto;
     }
-    .gameOver{
-        margin: 0% ;
-        width: auto ;
-        height: 100vh ;
+    .gameOver {
+        margin: 0%;
+        width: auto;
+        height: 100vh;
     }
 }
