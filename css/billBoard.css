@@ -235,3 +235,8 @@
     -webkit-transform: scale(1.5);
   }
 }
+
+
+.display-none {
+    display: none;
+}

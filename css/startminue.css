@@ -131,7 +131,7 @@
 
 .Container .gamerScren .playerImg {
     display: flex;
-    align-items: end;
+    align-items: center;
 }
 
 .Container .gamerScren .playerImg img {
@@ -206,6 +206,29 @@
     border-radius: 10px;
 }
 
+.playerImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+}
+.go-to-map {
+    cursor: pointer;
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 100px;
+    height: 35px;
+    background-color: rgb(23, 23, 37);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.go-to-map:hover {
+    opacity: .9;
+}
 @media (min-width:500px) and (max-width:768px) {
     .myContainer .container img {
         width: 290px;
