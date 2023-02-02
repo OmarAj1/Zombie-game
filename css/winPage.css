@@ -1,0 +1,12 @@
+.winPage {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(165deg, #e4e4e4 30%, darkgray 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  font-size: 10rem;
+}
