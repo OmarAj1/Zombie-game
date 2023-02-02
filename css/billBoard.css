@@ -58,14 +58,14 @@
   height: 120px;
   width: 120px;
   position: relative;
-  transform: rotate(90deg);
+  transform: rotate(90deg) scale(0.6);
 }
 .circle {
   background-color: #fff;
   height: 120px;
   width: 120px;
   display: block;
-  border: 5px solid #00baff;
+  border: 5px solid #47370c;
   border-radius: 100px;
   position: absolute;
   bottom: 0;
@@ -87,7 +87,7 @@
 }
 .fa {
   font-size: 42px;
-  color: #00baff;
+  color: #503713;
   bottom: 27px;
   position: absolute;
   left: 50%;
@@ -118,7 +118,7 @@
   opacity: 0;
   width: 110px;
   height: 110px;
-  border: 10px solid #00baff;
+  border: 10px solid #382b08;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -o-border-radius: 100px;
