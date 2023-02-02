@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e9870e6575.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/startminue.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e9870e6575.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/startminue.css" />
     <link rel="stylesheet" href="/css/worldMap.css" />
-    <link rel="stylesheet" href="/css/billBoard.css">
+    <link rel="stylesheet" href="/css/billBoard.css" />
     <title>Monster Quest</title>
 
 </head>
-
 <body>
     <main>
         <div class="myContainer">
@@ -26,11 +27,11 @@
                     </div>
                     <input id="namePlayer" type="text">
                 </form>
-                <a href="container" class="btn-Primary">Start Game</a>
+                <a class="btn-Primary start-game-btn">Start Game</a>
             </div>
         </div>
         <section>
-            <div class="Container">
+            <div class="Container stats-container">
                 <div class="gamerScren">
                     <div class="playerData">
                         <ul>
@@ -93,41 +94,127 @@
                     </div>
                     <div class="playerImg">
                         <img src="/assets/image/Boss Tantalus.png" alt="">
+                            <button class="go-to-map">Go To Map</button>
                     </div>
                 </div>
             </div>
-        </section>
+            <input id="namePlayer" type="text" />
+          </form>
+          <a href="#nameGamer" class="btn-Primary">Start Game</a>
+        </div>
+      </div>
+      <section>
+        <div class="Container">
+          <div class="gamerScren">
+            <div class="playerData">
+              <ul>
+                <li style="text-align: center">
+                  <h2>freePoints: <span id="freePoints">3</span></h2>
+                </li>
+                <li style="text-align: center">
+                  <div style="display: block" class="informatinPlayers">
+                    <h3 style="display: inline-block" id="maxXp">maxXp</h3>
+                    <h3 style="display: inline-block">/100</h3>
+                  </div>
+                </li>
+                <li>
+                  <div class="informatinPlayers">
+                    <h4>name</h4>
+                    <h3 id="name">name</h3>
+                  </div>
+                </li>
+                <li>
+                  <div class="informatinPlayers">
+                    <h4>lvl</h4>
+                    <h3 id="btnLvl">lvl</h3>
+                  </div>
+                </li>
+                <li>
+                  <div class="informatinPlayers">
+                    <h4>str</h4>
+                    <button class="btnPlus btnStr">+</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="informatinPlayers">
+                    <h4>dex</h4>
+                    <button class="btnPlus btnDex">+</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="informatinPlayers">
+                    <h4>def</h4>
+                    <button class="btnPlus btnDef">+</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="informatinPlayers">
+                    <h4>xp</h4>
+                    <button class="btnPlus btnXp">+</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="playerImg">
+              <img src="/assets/image/Boss Tantalus.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-
     <div class="containerWorld">
-        <div class="main">
-            <div class="nameLocationBtns">
-                <input type="button" class="btnLOcation toLocation1" value="location1" />
-                <input type="button" class="btnLOcation toLocation2" value="location2" />
-                <input type="button" class="btnLOcation toLocation3" value="location3" />
-                <input type="button" class="btnLOcation toLocation4" value="location4" />
-            </div>
-            <div class="map">
-                <img id="backTostats" src="./assets/image/backTostats.png" alt="" srcset="" />
-                <img id="mapPic" src="./assets/image/map.webp" alt="" />
-                <p class="winGameTitle"><span>WIN GAME:</span></p>
-                <p class="costTitle">Cost: <span class="lifeAmount">1000G</span></p>
-            </div>
-            <div class="details">
-                <p>gold: <span class="goldAmount">10G</span></p>
-                <div class="photoMain">
-                    <input type="button" value="+" class="pluss" />
-                    <div class="containPotion">
-                        <img style="width: 3rem" src="./assets/image/potion.gif" alt="potion" />
-                        <p class="countPotion">0</p>
-                    </div>
-                    <p>10G</p>
-                </div>
-            </div>
+      <div class="main">
+        <div class="nameLocationBtns">
+          <input
+            type="button"
+            class="btnLOcation toLocation1"
+            value="location1"
+          />
+          <input
+            type="button"
+            class="btnLOcation toLocation2"
+            value="location2"
+          />
+          <input
+            type="button"
+            class="btnLOcation toLocation3"
+            value="location3"
+          />
+          <input
+            type="button"
+            class="btnLOcation toLocation4"
+            value="location4"
+          />
         </div>
+        <div class="map">
+          <img
+            id="backTostats"
+            src="./assets/image/backTostats.png"
+            alt=""
+            srcset=""
+          />
+          <img id="mapPic" src="./assets/image/map.webp" alt="" />
+          <p class="winGameTitle"><span class="winGame">WIN GAME:</span></p>
+          <p class="costTitle">Cost: <span class="lifeAmount">1000G</span></p>
+        </div>
+        <div class="details">
+          <p>gold: <span class="goldAmount">10</span><span>G</span></p>
+          <div class="photoMain">
+            <input type="button" value="+" class="pluss" />
+            <div class="containPotion">
+              <img
+                style="width: 3rem"
+                src="./assets/image/potion.gif"
+                alt="potion"
+              />
+              <p class="countPotion">0</p>
+            </div>
+            <p>10G</p>
+          </div>
+        </div>
+      </div>
     </div>
-
 
     <section class="Bill-board">
         <nav class="billboard-top">
@@ -168,14 +255,24 @@
                 <span>Level: <span class="gold-amount">0</span></span>
             </div>
         </div>
+      </nav>
+      <div class="billboard-container">
+        <div class="monster-one card">
+          <h1 class="card-title">Wanted</h1>
+          <div class="monster-image"></div>
+          <span>Name: <span class="gold-amount">0</span></span>
+          <span>Gold: <span class="gold-amount">0</span></span>
+          <span>Level: <span class="gold-amount">0</span></span>
+        </div>
+        <div class="monster-two card"></div>
+        <div class="monster-three card"></div>
+        <div class="monster-four card"></div>
+      </div>
     </section>
 
     <section class="gameOver">
-        <img src="/assets/image/pngimg.com - game_over_PNG36.png" alt="">
+      <img src="/assets/image/pngimg.com - game_over_PNG36.png" alt="" />
     </section>
 </body>
 <script type="module" src="scripts/script.js"></script>
-
-</script>
-
 </html>
