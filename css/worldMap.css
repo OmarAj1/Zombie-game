@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .containerWorld {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   /* height: 100vh; */
   background: url("../assets/image/waP2.jpeg") no-repeat center center/cover;
