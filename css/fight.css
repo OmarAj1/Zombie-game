@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Container {
+    margin: 0px auto;
+    background-color: #cdcdcd;
+    width: 80%;
+    border-radius: 10px;
+    height: 100vh;
+}
+
+.fightScreen {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.fightScreen div img {
+    width: 100%;
+}
+
+.Container .divBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Container div.divBtn button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #ff4053;
+    box-shadow: -2px 9px 13px -2px rgba(0, 0, 0, 0.86);
+    color: #fff;
+    font-size: 11px;
+}
+.Container .fightScreen{
+    position: relative;
+}
+.winDiv{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.86);
+    color: #fff;
+    font-weight: 700;
+}
+.winDiv button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #ff4053;
+    box-shadow: -2px 9px 13px -2px rgba(0, 0, 0, 0.86);
+    color: #fff;
+    font-size: 11px;
+}
+.Container .fightScreen .monsterImg{
+    position: relative;
+}
+.Container .fightScreen .monsterImg .monsterInf{
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    font-weight: 900;
+    font-size: 1vw;
+}
+
+.Container .fightScreen .playerImg{
+    position: relative;
+}
+
+.Container .fightScreen .playerImg .playerInf{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    font-weight: 900;
+    font-size: 1vw;
+}
+
+@media (max-width:500px) {
+    .Container .fightScreen .playerImg .playerInf{
+        position: absolute;
+        bottom: 20%;
+        right: 10%;
+        font-weight: 900;
+        font-size: 2vw;
+    } 
+    .Container .fightScreen .monsterImg .monsterInf{
+        position: absolute;
+        bottom: 20%;
+        left: 10%;
+        font-weight: 900;
+        font-size: 2vw;
+    }
+}
