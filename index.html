@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e9870e6575.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/startminue.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e9870e6575.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/startminue.css" />
     <link rel="stylesheet" href="/css/worldMap.css" />
-    <link rel="stylesheet" href="/css/billBoard.css">
+    <link rel="stylesheet" href="/css/billBoard.css" />
     <title>Monster Quest</title>
 
 </head>
@@ -96,38 +98,63 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
+        </div>
+      </div>
+      <section>
+      
 
     <div class="containerWorld">
-        <div class="main">
-            <div class="nameLocationBtns">
-                <input type="button" class="btnLOcation toLocation1" value="location1" />
-                <input type="button" class="btnLOcation toLocation2" value="location2" />
-                <input type="button" class="btnLOcation toLocation3" value="location3" />
-                <input type="button" class="btnLOcation toLocation4" value="location4" />
-            </div>
-            <div class="map">
-                <img id="backTostats" src="./assets/image/backTostats.png" alt="" srcset="" />
-                <img id="mapPic" src="./assets/image/map.webp" alt="" />
-                <p class="winGameTitle"><span>WIN GAME:</span></p>
-                <p class="costTitle">Cost: <span class="lifeAmount">1000G</span></p>
-            </div>
-            <div class="details">
-                <p>gold: <span class="goldAmount">10G</span></p>
-                <div class="photoMain">
-                    <input type="button" value="+" class="pluss" />
-                    <div class="containPotion">
-                        <img style="width: 3rem" src="./assets/image/potion.gif" alt="potion" />
-                        <p class="countPotion">0</p>
-                    </div>
-                    <p>10G</p>
-                </div>
-            </div>
+      <div class="main">
+        <div class="nameLocationBtns">
+          <input
+            type="button"
+            class="btnLOcation toLocation1"
+            value="location1"
+          />
+          <input
+            type="button"
+            class="btnLOcation toLocation2"
+            value="location2"
+          />
+          <input
+            type="button"
+            class="btnLOcation toLocation3"
+            value="location3"
+          />
+          <input
+            type="button"
+            class="btnLOcation toLocation4"
+            value="location4"
+          />
         </div>
+        <div class="map">
+          <img
+            id="backTostats"
+            src="./assets/image/backTostats.png"
+            alt=""
+            srcset=""
+          />
+          <img id="mapPic" src="./assets/image/map.webp" alt="" />
+          <p class="winGameTitle"><span class="winGame">WIN GAME:</span></p>
+          <p class="costTitle">Cost: <span class="lifeAmount">1000G</span></p>
+        </div>
+        <div class="details">
+          <p>gold: <span class="goldAmount">10</span><span>G</span></p>
+          <div class="photoMain">
+            <input type="button" value="+" class="pluss" />
+            <div class="containPotion">
+              <img
+                style="width: 3rem"
+                src="./assets/image/potion.gif"
+                alt="potion"
+              />
+              <p class="countPotion">0</p>
+            </div>
+            <p>10G</p>
+          </div>
+        </div>
+      </div>
     </div>
-
 
     <section class="Bill-board">
         <nav class="billboard-top">
@@ -168,14 +195,11 @@
                 <span>Level: <span class="gold-amount">0</span></span>
             </div>
         </div>
-    </section>
+      </nav>
 
     <section class="gameOver">
-        <img src="/assets/image/pngimg.com - game_over_PNG36.png" alt="">
+      <img src="/assets/image/pngimg.com - game_over_PNG36.png" alt="" />
     </section>
 </body>
 <script type="module" src="scripts/script.js"></script>
-
-</script>
-
 </html>

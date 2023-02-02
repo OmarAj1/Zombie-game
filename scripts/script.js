@@ -1,9 +1,9 @@
 const location1 = ["blabla", "dladla"];
 const location2 = ["zz", "yy"];
-let locationNames = listLocations(4, location1, location2);
+let locationNames = listLocations(4, location1, location2); //שמות המקומות
 let mapLocations = [];
 let currentLocation = null;
-const EXP_PER_KILL = 50;
+const EXP_PER_KILL = 50;;
 
 const Player = {
   maxHp: 100,
@@ -171,6 +171,42 @@ function extraDamage(level) {
 // fight(Player, monsterStrong);
 // console.log(Player);
 
+/////////////////////////////////////////////////
+//                       mika                  //
+/////////////////////////////////////////////////
+const MapSelectors = {
+  containerWorld: document.querySelector(".containerWorld"),
+  winGame: document.querySelector(".winGame"),
+
+  potionAmount: document.querySelector(".countPotion"),
+  goldAmount: document.querySelector(".goldAmount"),
+  lifeAmount: document.querySelector(".lifeAmount"),
+  toLocation1: document.querySelector(".btnLOcation.toLocation1"),
+  toLocation2: document.querySelector(".btnLOcation.toLocation2"),
+  toLocation3: document.querySelector(".btnLOcation.toLocation3"),
+  toLocation4: document.querySelector(".btnLOcation.toLocation4"),
+  backTostats: document.querySelector("#backTostats"),
+  pluss: document.querySelector(".pluss"),
+};
+
+MapSelectors.toLocation1.value = locationNames[0];
+MapSelectors.toLocation2.value = locationNames[1];
+MapSelectors.toLocation3.value = locationNames[2];
+MapSelectors.toLocation4.value = locationNames[3];
+
+MapSelectors.pluss.addEventListener("click", function () {
+  // console.log(MapSelectors.thePotionAmount);
+  // MapSelectors.thePotionAmount++;
+  // MapSelectors.potionAmount.innerText(`${MapSelectors.thePotionAmount}`);
+
+  if (Player.gold >= 0) {
+    Player.gold -= 10;
+    Player.potions++;
+    MapSelectors.potionAmount.textContent = Player.potions;
+    MapSelectors.goldAmount.textContent = Player.gold;
+  }
+});
+
 // trying to approach DOM
 // hide all sections except the name page
 const nameInput = document.querySelector("#namePlayer");
@@ -208,32 +244,32 @@ startBtn.addEventListener("click", () => {
 });
 
 
+btnStr.addEventListener("click", function() {
+    if (Player.freePoints > 0) {
+        Player.str++;
+        document.querySelector("#strVal").innerHTML = Player.str;
+        Player.freePoints--;
+        document.querySelector("#freePoints").innerHTML = Player.freePoints;
+    }
+});
+btnDex.addEventListener("click", function() {
+    if (Player.freePoints > 0) {
+        Player.dex++;
+        document.querySelector("#dexVal").innerHTML = Player.dex;
+        Player.freePoints--;
+        document.querySelector("#freePoints").innerHTML = Player.freePoints;
+    }
+});
+btnDef.addEventListener("click", function() {
+    if (Player.freePoints > 0) {
+        Player.def++;
+        document.querySelector("#defVal").innerHTML = Player.def;
 
-btnStr.addEventListener("click", function () {
-  if (Player.freePoints > 0) {
-    Player.str++;
-    document.querySelector("#strVal").innerHTML = Player.str;
-    Player.freePoints--;
-    document.querySelector("#freePoints").innerHTML = Player.freePoints;
-  }
+        Player.freePoints--;
+        document.querySelector("#freePoints").innerHTML = Player.freePoints;
+    }
 });
-btnDex.addEventListener("click", function () {
-  if (Player.freePoints > 0) {
-    Player.dex++;
-    document.querySelector("#dexVal").innerHTML = Player.dex;
-    Player.freePoints--;
-    document.querySelector("#freePoints").innerHTML = Player.freePoints;
-  }
-});
-btnDef.addEventListener("click", function () {
-  if (Player.freePoints > 0) {
-    Player.def++;
-    document.querySelector("#defVal").innerHTML = Player.def;
 
-    Player.freePoints--;
-    document.querySelector("#freePoints").innerHTML = Player.freePoints;
-  }
-});
 btnHp.addEventListener("click", function () {
   if (Player.freePoints > 0) {
     Player.currentHp+=10;
