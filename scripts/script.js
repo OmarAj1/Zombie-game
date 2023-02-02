@@ -3,7 +3,7 @@ const location2 = ["zz", "yy"];
 let locationNames = listLocations(4, location1, location2); //שמות המקומות
 let mapLocations = [];
 let currentLocation = null;
-const EXP_PER_KILL = 50;
+const EXP_PER_KILL = 50;;
 
 const Player = {
   maxHp: 100,
@@ -199,7 +199,7 @@ MapSelectors.pluss.addEventListener("click", function () {
   // MapSelectors.thePotionAmount++;
   // MapSelectors.potionAmount.innerText(`${MapSelectors.thePotionAmount}`);
 
-  if (Player.gold >= 10) {
+  if (Player.gold >= 0) {
     Player.gold -= 10;
     Player.potions++;
     MapSelectors.potionAmount.textContent = Player.potions;
@@ -209,7 +209,11 @@ MapSelectors.pluss.addEventListener("click", function () {
 
 // trying to approach DOM
 // hide all sections except the name page
-// const nameInput = document.querySelector("#namePlayer");
+const nameInput = document.querySelector("#namePlayer");
+const startBtn = document.querySelector(".start-game-btn");
+const gameStartContainer = document.querySelector(".myContainer");
+const endStatsBtn = document.querySelector(".go-to-map");
+const playerStatsContainer = document.querySelector(".stats-container");
 
 // document.querySelector(".container").style.display = "none";
 // document.querySelector(".Container").style.display = "none";
@@ -220,7 +224,7 @@ MapSelectors.pluss.addEventListener("click", function () {
 const btnStr = document.querySelector(".btnStr");
 const btnDex = document.querySelector(".btnDex");
 const btnDef = document.querySelector(".btnDef");
-const btnXp = document.querySelector(".btnXp");
+const btnHp = document.querySelector(".btnXp");
 
 document.querySelector("#btnLvl").innerHTML = Player.lvl;
 document.querySelector("#name").innerHTML = Player.name;
@@ -228,39 +232,54 @@ document.querySelector("#strVal").innerHTML = Player.str;
 document.querySelector("#dexVal").innerHTML = Player.dex;
 document.querySelector("#defVal").innerHTML = Player.def;
 document.querySelector("#xpVal").innerHTML = Player.currentHp;
-
 document.querySelector("#freePoints").innerHTML = Player.freePoints;
 
-btnStr.addEventListener("click", function () {
-  if (Player.freePoints > 0) {
-    Player.str++;
-    document.querySelector("#strVal").innerHTML = Player.str;
-    Player.freePoints--;
-    document.querySelector("#freePoints").innerHTML = Player.freePoints;
+startBtn.addEventListener("click", () => {
+    console.log(Player.name);
+  if (nameInput.value === '') {
+    return;
   }
+  Player.name = nameInput.value;
+  gameStartContainer.classList.add('display-none');
 });
-btnDex.addEventListener("click", function () {
-  if (Player.freePoints > 0) {
-    Player.dex++;
-    document.querySelector("#dexVal").innerHTML = Player.dex;
-    Player.freePoints--;
-    document.querySelector("#freePoints").innerHTML = Player.freePoints;
-  }
-});
-btnDef.addEventListener("click", function () {
-  if (Player.freePoints > 0) {
-    Player.def++;
-    document.querySelector("#defVal").innerHTML = Player.def;
 
-    Player.freePoints--;
-    document.querySelector("#freePoints").innerHTML = Player.freePoints;
-  }
+
+btnStr.addEventListener("click", function() {
+    if (Player.freePoints > 0) {
+        Player.str++;
+        document.querySelector("#strVal").innerHTML = Player.str;
+        Player.freePoints--;
+        document.querySelector("#freePoints").innerHTML = Player.freePoints;
+    }
 });
-btnXp.addEventListener("click", function () {
+btnDex.addEventListener("click", function() {
+    if (Player.freePoints > 0) {
+        Player.dex++;
+        document.querySelector("#dexVal").innerHTML = Player.dex;
+        Player.freePoints--;
+        document.querySelector("#freePoints").innerHTML = Player.freePoints;
+    }
+});
+btnDef.addEventListener("click", function() {
+    if (Player.freePoints > 0) {
+        Player.def++;
+        document.querySelector("#defVal").innerHTML = Player.def;
+
+        Player.freePoints--;
+        document.querySelector("#freePoints").innerHTML = Player.freePoints;
+    }
+});
+
+btnHp.addEventListener("click", function () {
   if (Player.freePoints > 0) {
-    Player.currentHp++;
+    Player.currentHp+=10;
     document.querySelector("#xpVal").innerHTML = Player.currentHp;
     Player.freePoints--;
     document.querySelector("#freePoints").innerHTML = Player.freePoints;
   }
+});
+
+
+endStatsBtn.addEventListener('click',()=>{
+    playerStatsContainer.classList.add('display-none');
 });
